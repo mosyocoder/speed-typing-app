@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+:root{
+    --bgColor:#f2ede1;
+    --headerBg:#e3d3c4;
+    --fontCurrentBgColor:#432c1d;
+    --fontColor:#f2ede1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root[data-theme="dark"]{
+    --bgColor:#432c1d;
+    --headerBg:#d2ab8f;
+    --fontCurrentBgColor:#f2ede1;
+    --fontColor:#432c1d;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+    background-color: var(--bgColor)!important;
+    transition: all 1s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header{
+    background-color: var(--headerBg);
 }
 
-.App-link {
-  color: #61dafb;
+.form-select{
+    width: 25%!important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn{
+    background-color: transparent;
+}
+
+.word{
+    background-color: var(--headerBg);
+}
+
+.currentWord{
+    background-color: var(--fontCurrentBgColor);
+    color: var(--fontColor);
+}
+
+.true{
+    background-color: transparent;
+    color: green;
+}
+
+.false{
+    background-color: transparent;
+    color: red;
 }
