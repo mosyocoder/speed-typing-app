@@ -19,6 +19,15 @@ body{
 
 .header{
     background-color: var(--headerBg);
+    min-height: 100px;
+    align-items: center;
+    padding: 5px;
+}
+.header > select{
+    min-height: 50px;
+}
+.header > button{
+    max-height: 50px;
 }
 
 .form-select{
@@ -38,12 +47,31 @@ body{
     color: var(--fontColor);
 }
 
-.true{
-    background-color: transparent;
-    color: green;
+.correctWord{
+    color:green;
 }
 
-.false{
+.wrongWord{
+    color:red
+}
+
+.input{
+    background-color: var(--headerBg);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input > input {
     background-color: transparent;
-    color: red;
+    border: none;
+    border-bottom: 1px solid var(--fontCurrentBgColor);
+    max-height: 75px;
+    min-width: 300px;
+    margin-left: 50px;
+}
+
+.input > input:focus{
+    outline: none;
+    
 }

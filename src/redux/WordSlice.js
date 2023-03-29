@@ -13,6 +13,8 @@ export const WordSlice = createSlice({
 		language: "turkish",
 		currentWord: 0,
 		inputText: "",
+		time: 10,
+		status: "wait",
 	},
 	reducers: {
 		darkTheme: (state) => {
@@ -27,12 +29,18 @@ export const WordSlice = createSlice({
 		changeInputText: (state, action) => {
 			state.inputText = action.payload;
 		},
-		wordStatus: (state) => {
+		wordStatus: (state, action) => {
 			const cw = state.words[state.currentWord + 1];
-			cw.status = "true";
+			cw.status = action.payload;
+		},
+		statusChange: (state, action) => {
+			state.status = action.payload;
+		},
+		timeDecrease: (state) => {
+			state.time -= 1;
 		},
 	},
 });
 
-export const { darkTheme, changeLang, currentWordIncrease, wordStatus, changeInputText } = WordSlice.actions;
+export const { darkTheme, changeLang, currentWordIncrease, wordStatus, changeInputText, statusChange, timeDecrease } = WordSlice.actions;
 export default WordSlice.reducer;
