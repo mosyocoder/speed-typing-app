@@ -60,6 +60,7 @@ body{
     align-items: center;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 25px;
 }
 
 .input > input {
@@ -68,10 +69,91 @@ body{
     border-bottom: 1px solid var(--fontCurrentBgColor);
     max-height: 75px;
     min-width: 300px;
-    margin-left: 50px;
+    margin-left: 150px;
 }
 
 .input > input:focus{
     outline: none;
     
+}
+
+
+.time{
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.time > p {
+    margin: 0;
+}
+
+.time > p:nth-child(even){
+    font-size: 20px;
+}
+
+.finishPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-header{
+    font-size: 30px;
+    font-weight: bold;
+    min-width: 500px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-body{
+    padding: 0;
+}
+
+.card-body > *:nth-child(odd){
+    background-color: #432c1d;
+    color: #fff;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-body > *:nth-child(even){
+    background-color: #f2ede1;
+    color: #432c1d;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-title {
+    margin: 0;
+}
+
+.card-title > p{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.card-title > p > span{
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.card-text > p:first-child{
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.card-text > p:last-child{
+    font-weight: bold;
+    text-align: center;
 }
